@@ -7,26 +7,42 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <style>
-        
+        .short-info {
+            position: relative;
+            display: grid;
+            overflow:hidden;
+            height: 100vh;
+            margin: 0px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 
+                  "photo name"
+                  "links about";
+        }
+        .photo-block {
+            grid-area: photo;
+            background: red;
+        }
+        .name-block {
+            grid-area: name;
+            background: green;
+        }
+        .about-me-block {
+            grid-area: about;
+            background: rgb(255, 230, 0);
+        }
+        .links-block {
+            grid-area: links;
+            background: rgb(68, 0, 255);
+        }
     </style>
 </head>
 <body>
     <div id="page1" class="short-info">
-        <div class="photo-block">
-            <div class="photo-image"></div>
-        </div>
-        <div class="name-block">}{от@быч</div>
-        <div class="about-me-block">Я джин ...</div>
-        <div class="links-block">
-            <a href="#page1" class="anchor-link">Vk</a>
-            <a href="#page2" class="anchor-link">Facebook</a>
-            <a href="#page3" class="anchor-link">Instagram</a>
-            <a href="#page4" class="anchor-link">Twitter</a>
-        </div>
-    </div>
-    <div id="page2" class="long-info">
-        <h3>Здесь будет более детальная информация</h3>
-    </div>
-    
+        <div class="photo-block"></div>
+        <div class="name-block"></div>
+        <div class="about-me-block"></div>
+        <div class="links-block"> </div>
+    </div>   
 </body>
 </html>
