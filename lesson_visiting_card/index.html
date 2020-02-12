@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <!--link rel="stylesheet" type="text/css" href="./style.css"-->
     <style>
+        body {
+            background: #950090;
+            padding:0px;
+            font-size: 16px;
+        }
         .short-info {
             position: relative;
             display: grid;
@@ -14,35 +19,77 @@
             height: 100vh;
             margin: 0px;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 1fr 1fr auto;
             grid-template-areas: 
-                  "photo name"
-                  "links about";
+                  "about photo"
+                  "about name"
+                  "links links";
         }
         .photo-block {
             grid-area: photo;
-            background: red;
+        }
+        .photo-image {
+            height:100%;
+            width:100%;
+            background-image: url(https://st.depositphotos.com/1757583/2169/i/450/depositphotos_21696885-stock-photo-yin-yang-symbol.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
         }
         .name-block {
             grid-area: name;
-            background: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:#ddff1e;
+            font-size: 300%;
         }
         .about-me-block {
             grid-area: about;
-            background: rgb(255, 230, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:#29ff94;
         }
         .links-block {
             grid-area: links;
-            background: rgb(68, 0, 255);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .links-block>a {
+            display: inline-flex;
+            height: 64px;
+            width: 64px;
+            margin: 16px;
+            background: white;
+        }
+        .links-block>a.link-vk {
+            background: url(https://pngicon.ru/file/uploads/vk-256x256.png) no-repeat 50% / contain;
+        }
+        .links-block>a.link-facebook {
+            background: url(https://s1.iconbird.com/ico/2013/8/427/w256h2561377686849Facebook.png)
+            no-repeat 50% / contain;
+        }
+        .links-block>a.link-ok {
+            background: url(https://polzaza.ru/wp-content/uploads/2017/06/ok.png)
+            no-repeat 50% / contain;
         }
     </style>
 </head>
 <body>
     <div id="page1" class="short-info">
-        <div class="photo-block"></div>
-        <div class="name-block"></div>
-        <div class="about-me-block"></div>
-        <div class="links-block"> </div>
+        <div class="photo-block">
+            <div class="photo-image"></div>
+        </div>
+        <div class="name-block"> Vlad</div>
+        <div class="about-me-block"> kjfkjgfkjgkfjgghvhgvjhvg</div>
+        <div class="links-block"> 
+            <a href="#page1" class="link-vk"></a>
+            <a href="#page2" class="link-facebook"></a>
+            <a href="#page3" class="link-ok"></a>
+        </div>
     </div>   
 </body>
 </html>
