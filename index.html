@@ -4,48 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>code.school ITI examples</title>
+    <title>Document</title>
+    <!--link rel="stylesheet" type="text/css" href="./style.css"-->
     <style>
         body {
+            background: rgb(128, 0, 60);
+            padding:0px;
             font-size: 16px;
-            padding: 20px;
         }
-        a.lesson {
+        .short-info {
             position: relative;
-            display: inline-block;
-            padding: 8px 16px;
-            margin: 4px 0px;
-            border-left: #505050 solid 4px;
-            color: #505050;
-            background: #50505015;
+            display: grid;
+            overflow:hidden;
+            height: 100vh;
+            margin: 0px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr auto;
+            grid-template-areas: 
+                  "about photo"
+                  "about name"
+                  "links links";
         }
-        a.lesson:hover {
-            background-color: #505050;
-            color: #ffffff;
-            border-left-color: #c0c0c0;
-            text-decoration: none;
-            transition: 1s background-color, 
-                1s color, 
-                1s border-left-color;
+        .photo-block {
+            grid-area: photo;
         }
+        .photo-image {
+            height:100%;
+            width:100%;
+            background-image: url(https://st.depositphotos.com/1757583/2169/i/450/depositphotos_21696885-stock-photo-yin-yang-symbol.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        .name-block {
+            grid-area: name;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:#ddff1e;
+            font-size: 300%;
+        }
+        .about-me-block {
+            grid-area: about;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:#29ff94;
+        }
+        .links-block {
+            grid-area: links;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .links-block>a {
+            display: inline-flex;
+            height: 64px;
+            width: 64px;
+            margin: 16px;
+            background: white;
+        }
+        .links-block>a.link-vk {
+            background: url(https://pngicon.ru/file/uploads/vk-256x256.png) no-repeat 50% / contain;
+        }
+        .links-block>a.link-facebook {
+            background: url(https://s1.iconbird.com/ico/2013/8/427/w256h2561377686849Facebook.png)
+            no-repeat 50% / contain;
+        }
+        .links-block>a.link-ok {
+            background: url(https://polzaza.ru/wp-content/uploads/2017/06/ok.png)
+            no-repeat 50% / contain;
+        }
+        @media (max-width: 650px) {
+            .short-info {
+            position: relative;
+            display: grid;
+            overflow:hidden;
+            height: 100vh;
+            margin: 0px;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 0.5fr auto auto auto;
+            grid-template-areas: 
+                  "photo"
+                  "name"
+                  "about"
+                  "links";
+        }
+        .photo-block {
+            grid-area: photo;
+            justify-content: center;
+        }
+        .name-block {
+            grid-area: name;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .about-me-block {
+            grid-area: about;
+            display: flex;
+            justify-content: auto;
+            align-items: center;
+        }
+        .links-block>a {
+            display: inline-flex;
+            height: 48px;
+            width: 48px;
+            margin: 8px;
+        }
+    }
+    @media (min-width: 750px) {
+        .about-me-block {
+            grid-area: about;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 200%;
+        }
+    }
     </style>
 </head>
 <body>
-    <h1>life is good</h1>
-    <h2>Lessons examples for code.school ITI</h2>
-    <a class="lesson" href="./lesson_tags/index.html" title=" ">Ознакомление с некоторыми основными тегами</a>
-    <br>
-    <a class="lesson" href="./lesson_text/index.html" title=" ">Стилизация текста</a>
-    <br>
-    <a class="lesson" href="./lesson_links/index.html" title=" ">Ссылки</a>
-    <br>
-    <a class="lesson" href="./lesson_js/index.html" title=" ">JavaScript</a>
-    <br>
-    <a class="lesson" href="./lesson_artbox/index.html" title=" ">X-tree</a>
-    <br>
-    <a class="lesson" href="./lesson_x0/index.html" title=" ">TicTacToe game</a>
-    <br>
-    <a class="lesson" href="./lesson_transformations/index.html" title=" ">Transformations</a>
-    <br>
+    <div id="page1" class="short-info">
+        <div class="photo-block">
+            <div class="photo-image"></div>
+        </div>
+        <div class="name-block"> Vlad</div>
+        <div class="about-me-block">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+        </div>
+        <div class="links-block"> 
+            <a href="#page1" class="link-vk"></a>
+            <a href="#page2" class="link-facebook"></a>
+            <a href="#page3" class="link-ok"></a>
+        </div>
+    </div>   
 </body>
 </html>
