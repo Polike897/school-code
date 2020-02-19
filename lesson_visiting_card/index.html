@@ -8,7 +8,7 @@
     <!--link rel="stylesheet" type="text/css" href="./style.css"-->
     <style>
         body {
-            background: #950090;
+            background: rgb(128, 0, 60);
             padding:0px;
             font-size: 16px;
         }
@@ -76,6 +76,52 @@
             background: url(https://polzaza.ru/wp-content/uploads/2017/06/ok.png)
             no-repeat 50% / contain;
         }
+        @media (max-width: 650px) {
+            .short-info {
+            position: relative;
+            display: grid;
+            overflow:hidden;
+            height: 100vh;
+            margin: 0px;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 0.5fr auto auto auto;
+            grid-template-areas: 
+                  "photo"
+                  "name"
+                  "about"
+                  "links";
+        }
+        .photo-block {
+            grid-area: photo;
+            justify-content: center;
+        }
+        .name-block {
+            grid-area: name;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .about-me-block {
+            grid-area: about;
+            display: flex;
+            justify-content: auto;
+            align-items: center;
+        }
+        .links-block>a {
+            display: inline-flex;
+            height: 48px;
+            width: 48px;
+            margin: 8px;
+        }
+        }
+        @media (min-width: 750px) {
+            .about-me-block {
+            grid-area: about;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 200%;
+        }
     </style>
 </head>
 <body>
@@ -84,7 +130,9 @@
             <div class="photo-image"></div>
         </div>
         <div class="name-block"> Vlad</div>
-        <div class="about-me-block"> kjfkjgfkjgkfjgghvhgvjhvg</div>
+        <div class="about-me-block">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+        </div>
         <div class="links-block"> 
             <a href="#page1" class="link-vk"></a>
             <a href="#page2" class="link-facebook"></a>
