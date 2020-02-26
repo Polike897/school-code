@@ -8,7 +8,7 @@
     <!--link rel="stylesheet" type="text/css" href="./style.css"-->
     <style>
         body {
-            background: rgb(128, 0, 60);
+            background: rgb(134, 20, 200);
             padding:0px;
             font-size: 16px;
         }
@@ -123,6 +123,22 @@
             font-size: 200%;
         }
     }
+    html {
+        scroll-behavior: smooth;
+    }
+    .page-block {
+        min-height: 100vh;
+        height: auto;
+    }
+    .link-next {
+        display: inline-flex;
+        position: relative;
+        align-self: flex-end;
+        background: #ddff1e;
+        color: red;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
     </style>
 </head>
 <body>
@@ -132,7 +148,8 @@
         </div>
         <div class="name-block"> Vlad</div>
         <div class="about-me-block">
-            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+            <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.</p>
+            <a href="#page2" class="link-next" > next </a>
         </div>
         <div class="links-block"> 
             <a href="#page1" class="link-vk"></a>
@@ -140,5 +157,11 @@
             <a href="#page3" class="link-ok"></a>
         </div>
     </div>   
+    <div id="page2" class="page-block">
+        <h3>block s info 2</h3>
+    </div>
+    <div id="page3" class="page-block">
+        <h3>block s info 3</h3>
+    </div>
 </body>
 </html>
