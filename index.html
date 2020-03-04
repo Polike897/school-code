@@ -4,141 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!--link rel="stylesheet" type="text/css" href="./style.css"-->
+    <link rel="stylesheet" type="text/css" href="res/styles/main.css">
+    <title>My page</title>
     <style>
-        body {
-            background: rgb(134, 20, 200);
-            padding:0px;
-            font-size: 16px;
-        }
-        .short-info {
-            position: relative;
-            display: grid;
-            overflow:hidden;
-            height: 100vh;
-            margin: 0px;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr auto;
-            grid-template-areas: 
-                  "about photo"
-                  "about name"
-                  "links links";
-        }
-        .photo-block {
-            grid-area: photo;
-        }
-        .photo-image {
-            height:100%;
-            width:100%;
-            background-image: url(https://st.depositphotos.com/1757583/2169/i/450/depositphotos_21696885-stock-photo-yin-yang-symbol.jpg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-        }
-        .name-block {
-            grid-area: name;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color:#ddff1e;
-            font-size: 300%;
-        }
-        .about-me-block {
-            grid-area: about;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color:#29ff94;
-        }
-        .links-block {
-            grid-area: links;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .links-block>a {
-            display: inline-flex;
-            height: 64px;
-            width: 64px;
-            margin: 16px;
-            background: white;
-        }
-        .links-block>a.link-vk {
-            background: url(https://pngicon.ru/file/uploads/vk-256x256.png) no-repeat 50% / contain;
-        }
-        .links-block>a.link-facebook {
-            background: url(https://s1.iconbird.com/ico/2013/8/427/w256h2561377686849Facebook.png)
-            no-repeat 50% / contain;
-        }
-        .links-block>a.link-ok {
-            background: url(https://polzaza.ru/wp-content/uploads/2017/06/ok.png)
-            no-repeat 50% / contain;
-        }
-        @media (max-width: 650px) {
-            .short-info {
-            position: relative;
-            display: grid;
-            overflow:hidden;
-            height: 100vh;
-            margin: 0px;
-            grid-template-columns: 1fr ;
-            grid-template-rows: 0.5fr auto auto auto;
-            grid-template-areas: 
-                  "photo"
-                  "name"
-                  "about"
-                  "links";
-        }
-        .photo-block {
-            grid-area: photo;
-            justify-content: center;
-        }
-        .name-block {
-            grid-area: name;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .about-me-block {
-            grid-area: about;
-            display: flex;
-            justify-content: auto;
-            align-items: center;
-        }
-        .links-block>a {
-            display: inline-flex;
-            height: 48px;
-            width: 48px;
-            margin: 8px;
-        }
-    }
-    @media (min-width: 750px) {
-        .about-me-block {
-            grid-area: about;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            font-size: 200%;
-        }
-    }
-    html {
-        scroll-behavior: smooth;
-    }
-    .page-block {
-        min-height: 100vh;
-        height: auto;
-    }
-    .link-next {
-        display: inline-flex;
-        position: relative;
-        align-self: flex-end;
-        background: #ddff1e;
-        color: red;
-        padding: 8px 16px;
-        text-decoration: none;
-    }
+        
     </style>
 </head>
 <body>
@@ -156,10 +25,19 @@
             <a href="#page2" class="link-facebook"></a>
             <a href="#page3" class="link-ok"></a>
         </div>
-    </div>   
+    </div>
+    <div id="page-galery" class="page">
+       <div class="card"><div class="photo"></div></div>
+       <div class="card"><div class="photo"></div></div>
+       <div class="card"><div class="photo"></div></div>
+       <div class="card"><div class="photo"></div></div>
+       <div class="card"><div class="photo"></div></div>
+    </div>
+
     <div id="page2" class="page-block">
         <h3>block s info 2</h3>
     </div>
+    
     <div id="page3" class="page-block">
         <h3>block s info 3</h3>
     </div>
